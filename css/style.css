@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(125, 170, 170, 0.3);
+}
+
+.bg-cyan{
+    background-color: rgb(51, 109, 109);
+}
+
+h1, p{
+    color: white;
+    margin-top: 1rem;
+}
