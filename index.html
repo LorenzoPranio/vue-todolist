@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-12 bg-cyan rounded">
                         <ul class="list-group list-group-flush" v-for="dafare, index in todo">
-                            <li class="list-group-item bg-cyan">
+                            <li class="list-group-item bg-cyan" :class="dafare.done === true ? 'text-true' : ''">
                                 <div class="d-flex justify-content-between">
                                     <p>{{ dafare.text }}</p>
                                     <div class="buttons">
