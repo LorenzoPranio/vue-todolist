@@ -9,72 +9,44 @@
     <title>To Do List</title>
 </head>
 <body>
-    <header>
-        <div class="container mt-3">
-            <div class="row">
-                <div class="col-12 bg-cyan rounded">
-                    <h1 class="text-center m-3">To Do List</h1>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <!-- lista delle cose da fare -->
-         <div class="container mt-3">
-            <div class="row">
-                <div class="col-12 bg-cyan rounded">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-cyan">
-                            <div class="d-flex justify-content-between">
-                                <p>lorem ipsum</p>
-                                <div class="buttons">
-                                    <button class="btn btn-sm btn-square bg-black mt-3">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item bg-cyan">
-                            <div class="d-flex justify-content-between">
-                                <p>lorem ipsum</p>
-                                <div class="buttons">
-                                    <button class="btn btn-sm btn-square bg-black mt-3">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item bg-cyan">
-                            <div class="d-flex justify-content-between">
-                                <p>lorem ipsum</p>
-                                <div class="buttons">
-                                    <button class="btn btn-sm btn-square bg-black mt-3">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item bg-cyan">
-                            <div class="d-flex justify-content-between">
-                                <p>lorem ipsum</p>
-                                <div class="buttons">
-                                    <button class="btn btn-sm btn-square bg-black mt-3">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-12 bg-cyan rounded mt-3 py-2">
-                    <div class="d-flex p-2">
-                        <input type="text" class="form-control" placeholder="Nuova Task">
-                        <button class="btn btn-sm btn-square bg-black"><p>Aggiungi</p></button>
+    <div id="app">
+        <header>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-12 bg-cyan rounded">
+                        <h1 class="text-center m-3">To Do List</h1>
                     </div>
                 </div>
             </div>
-         </div>
-    </main>
+        </header>
+        <main>
+            <!-- lista delle cose da fare -->
+             <div class="container mt-3">
+                <div class="row">
+                    <div class="col-12 bg-cyan rounded">
+                        <ul class="list-group list-group-flush" v-for="dafare, index in todo">
+                            <li class="list-group-item bg-cyan">
+                                <div class="d-flex justify-content-between">
+                                    <p>{{ dafare.text }}</p>
+                                    <div class="buttons">
+                                        <button class="btn btn-sm btn-square bg-black mt-3">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 bg-cyan rounded mt-3 py-2">
+                        <div class="d-flex p-2">
+                            <input type="text" class="form-control" placeholder="Nuova Task">
+                            <button class="btn btn-sm btn-square bg-black"><p>Aggiungi</p></button>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </main>
+    </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>
 </body>
