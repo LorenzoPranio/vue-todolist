@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newTask: null,
             todo: [
                 {
                     text: 'Finire l\'esercizio del giorno',
@@ -35,7 +36,15 @@ createApp({
     methods: {
         deleteTask(index){
             this.todo.splice(index, 1);
+        },
+        addTask(){
+            const newobj = {
+               text: this.newTask,
+               done: false,
+            }
+            this.todo.push(newobj);
+            this.newTask = null;
         }
-    }
-}).mount('#app')
+    },
+}).mount('#app');
     
