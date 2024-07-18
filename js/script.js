@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            do_list: [
+            todo: [
                 {
                     text: 'Finire l\'esercizio del giorno',
                     done: true,
