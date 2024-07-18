@@ -17,3 +17,23 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 
 *Bonus: 1* 
 Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
+
+
+*|SOLUZIONE|*
+
+1.-Creare il layout della pagina statico
+
+2.-Stilizzare la pagina
+
+3.-implementare Vue
+3.1.-Creare un Array di oggetti con TEXT e DONE
+
+4.-Far apparire su schermo TEXT apposto delle LI
+4.1.-Se text è true, apparirà sbarrato
+4.2.-Else (false) non apparirà sbarrato
+
+5.-Aggiugere un pulsante X
+5.1.-Al click rimuoverà la task
+
+6.-Creare un camput input testuale con un pulsante "Aggiungi"
+6.1.-Al click creerà una nuova task e la aggiunge alla lista
